@@ -66,7 +66,7 @@ const Login = () => {
       await signInWithEmailAndPassword(auth, email, password);
       router.push("/");
     } catch (err) {
-      console.log("Login error:", err.code, err.message); // shto këtë për ta parë arsyen
+      console.log("Login error:", err.code, err.message); 
       if (err.code === "auth/user-not-found") {
         setError("No user found with this email.");
       } else if (err.code === "auth/wrong-password") {
